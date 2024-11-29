@@ -1,0 +1,18 @@
+# ninja log v6
+33	1829	7541706876506948	CMakeFiles/taller2.dir/Producto.cpp.obj	30014bb2ccbc999f
+56	1827	7541706876740962	CMakeFiles/taller2.dir/AVL.cpp.obj	6ffca14be915bae7
+36	1828	7541706876537077	CMakeFiles/taller2.dir/Pedido.cpp.obj	37c1060d62546a05
+7	1830	7541706876246042	CMakeFiles/taller2.dir/main.cpp.obj	dbf059ec8cf7fdc2
+1830	2176	7541706894479318	taller2.exe	d43222a732495bc1
+14	1509	7541710919689912	CMakeFiles/taller2.dir/main.cpp.obj	dbf059ec8cf7fdc2
+39	1510	7541710919940852	CMakeFiles/taller2.dir/Pedido.cpp.obj	37c1060d62546a05
+42	1554	7541710919975935	CMakeFiles/taller2.dir/SistemaPedidos.cpp.obj	46d078ab7d77838f
+1555	1946	7541710935097680	taller2.exe	763958b73ba0eecb
+9	630	7541711585922449	CMakeFiles/taller2.dir/main.cpp.obj	dbf059ec8cf7fdc2
+13	814	7541711585962520	CMakeFiles/taller2.dir/SistemaPedidos.cpp.obj	46d078ab7d77838f
+814	922	7541711593961310	taller2.exe	763958b73ba0eecb
+12	2723	7541743611491845	CMakeFiles/taller2.dir/main.cpp.obj	dbf059ec8cf7fdc2
+33	2763	7541743611706698	CMakeFiles/taller2.dir/SistemaPedidos.cpp.obj	46d078ab7d77838f
+2763	3227	7541743639010116	taller2.exe	763958b73ba0eecb
+4	1256	7546054327284754	CMakeFiles/taller2.dir/main.cpp.obj	dbf059ec8cf7fdc2
+4	748	7546064197261548	CMakeFiles/taller2.dir/main.cpp.obj	dbf059ec8cf7fdc2
