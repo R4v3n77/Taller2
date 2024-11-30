@@ -11,4 +11,5 @@ add_executable(taller2 main.cpp
         AVL.cpp
         AVL.h
         SistemaPedidos.cpp
-        SistemaPedidos.h)
+        SistemaPedidos.h
+)

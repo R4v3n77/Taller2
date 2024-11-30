@@ -13,3 +13,4 @@ int Producto::getPrecio() const { return precio; }
 void Producto::mostrarProducto() const {
     std::cout << "ID: " << id << " - " << nombre << " ($" << precio << ")\n";
 }
+
