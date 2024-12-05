@@ -4,16 +4,35 @@
 #include "Pedido.h"
 #include <iostream>
 
+#include "ArbolPedidos.h"
+
 Pedido::Pedido(int id, const std::string& nombreCliente, const std::string& apellidoCliente, const std::vector<Producto>& productos)
-    : id(id), nombreCliente(nombreCliente), apellidoCliente(apellidoCliente), productos(productos) {
-    horaPedido = time(nullptr);
+    : id(id), nombreCliente(nombreCliente), apellidoCliente(apellidoCliente), productos(productos) {}
+
+int Pedido::getId() const {
+    return id;
 }
 
-int Pedido::getId() const { return id; }
-std::string Pedido::getNombreCliente() const { return nombreCliente; }
-std::string Pedido::getApellidoCliente() const { return apellidoCliente; }
-const std::vector<Producto>& Pedido::getProductos() const { return productos; }
-time_t Pedido::getHoraPedido() const { return horaPedido; }
+std::string Pedido::getNombreCliente() const {
+    return nombreCliente;
+}
+
+std::string Pedido::getApellidoCliente() const {
+    return apellidoCliente;
+}
+
+const std::vector<Producto>& Pedido::getProductos() const {
+    return productos;
+}
+
+// Implementación de calcularTotal
+double Pedido::calcularTotal() const {
+    double total = 0.0;
+    for (const auto& producto : productos) {
+        total += producto.getPrecio();
+    }
+    return total;
+}
 
 void Pedido::mostrarPedido() const {
     std::cout << "ID Pedido: " << id << "\n";
@@ -22,5 +41,12 @@ void Pedido::mostrarPedido() const {
     for (const auto& producto : productos) {
         producto.mostrarProducto();
     }
-    std::cout << "Hora del pedido: " << ctime(&horaPedido) << "\n";
+    std::cout << "Total del pedido: $" << calcularTotal() << "\n";
+}
+void ArbolPedidos::calcularMontoTotal(NodoPedido* nodo, double& total) {
+    if (nodo == nullptr) return;
+
+    total += nodo->pedido->calcularTotal(); // Utiliza calcularTotal de Pedido
+    calcularMontoTotal(nodo->izquierdo, total);
+    calcularMontoTotal(nodo->derecho, total);
 }

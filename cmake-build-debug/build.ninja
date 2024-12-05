@@ -79,6 +79,12 @@ build CMakeFiles/taller2.dir/SistemaPedidos.cpp.obj: CXX_COMPILER__taller2_unsca
   OBJECT_DIR = CMakeFiles\taller2.dir
   OBJECT_FILE_DIR = CMakeFiles\taller2.dir
 
+build CMakeFiles/taller2.dir/ArbolPedidos.cpp.obj: CXX_COMPILER__taller2_unscanned_Debug C$:/Users/mrobl/CLionProjects/taller2/ArbolPedidos.cpp || cmake_object_order_depends_target_taller2
+  DEP_FILE = CMakeFiles\taller2.dir\ArbolPedidos.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\taller2.dir
+  OBJECT_FILE_DIR = CMakeFiles\taller2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target taller2
@@ -87,7 +93,7 @@ build CMakeFiles/taller2.dir/SistemaPedidos.cpp.obj: CXX_COMPILER__taller2_unsca
 #############################################
 # Link the executable taller2.exe
 
-build taller2.exe: CXX_EXECUTABLE_LINKER__taller2_Debug CMakeFiles/taller2.dir/main.cpp.obj CMakeFiles/taller2.dir/Producto.cpp.obj CMakeFiles/taller2.dir/Pedido.cpp.obj CMakeFiles/taller2.dir/AVL.cpp.obj CMakeFiles/taller2.dir/SistemaPedidos.cpp.obj
+build taller2.exe: CXX_EXECUTABLE_LINKER__taller2_Debug CMakeFiles/taller2.dir/main.cpp.obj CMakeFiles/taller2.dir/Producto.cpp.obj CMakeFiles/taller2.dir/Pedido.cpp.obj CMakeFiles/taller2.dir/AVL.cpp.obj CMakeFiles/taller2.dir/SistemaPedidos.cpp.obj CMakeFiles/taller2.dir/ArbolPedidos.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\taller2.dir

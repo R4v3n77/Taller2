@@ -5,7 +5,6 @@
 #define PEDIDO_H
 
 #include <vector>
-#include <ctime>
 #include "Producto.h"
 
 class Pedido {
@@ -14,15 +13,18 @@ private:
     std::string nombreCliente;
     std::string apellidoCliente;
     std::vector<Producto> productos;
-    time_t horaPedido;
 
 public:
     Pedido(int id, const std::string& nombreCliente, const std::string& apellidoCliente, const std::vector<Producto>& productos);
+
     int getId() const;
     std::string getNombreCliente() const;
     std::string getApellidoCliente() const;
     const std::vector<Producto>& getProductos() const;
-    time_t getHoraPedido() const;
+
+    // Declarar calcularTotal
+    double calcularTotal() const;
+
     void mostrarPedido() const;
 };
 

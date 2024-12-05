@@ -12,4 +12,6 @@ add_executable(taller2 main.cpp
         AVL.h
         SistemaPedidos.cpp
         SistemaPedidos.h
+        ArbolPedidos.cpp
+        ArbolPedidos.h
 )

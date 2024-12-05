@@ -1,15 +1,18 @@
-#include "SistemaPedidos.h"
 #include <iostream>
+#include "SistemaPedidos.h"
 
 int main() {
     SistemaPedidos sistema;
-    bool corriendo = true;
+    int opcion;
 
-    while (corriendo) {
-        std::cout << "\n--- Menu Principal ---\n";
-        std::cout << "1. Crear Pedido\n2. Mostrar Pedidos\n3. Salir\n";
+    do {
+        std::cout << "\nMENU PRINCIPAL:\n";
+        std::cout << "1. Crear pedido\n";
+        std::cout << "2. Mostrar pedidos\n";
+        std::cout << "3. Cancelar pedido\n";     // Nueva opción
+        std::cout << "4. Ver estadisticas\n";    // Nueva opción
+        std::cout << "0. Salir\n";
         std::cout << "Seleccione una opcion: ";
-        int opcion;
         std::cin >> opcion;
 
         switch (opcion) {
@@ -20,13 +23,18 @@ int main() {
                 sistema.mostrarPedidos();
             break;
             case 3:
-                corriendo = false;
-            std::cout << "Cerrando sistema...\n";
+                sistema.cancelarPedido();
+            break;
+            case 4:
+                sistema.mostrarEstadisticas();
+            break;
+            case 0:
+                std::cout << "Saliendo del sistema.\n";
             break;
             default:
-                std::cout << "Opción invalida. Intente nuevamente.\n";
+                std::cout << "Opcion no valida. Intente de nuevo.\n";
         }
-    }
+    } while (opcion != 0);
 
     return 0;
 }

@@ -3,7 +3,7 @@
 //
 #include "SistemaPedidos.h"
 #include <iostream>
-#include <algorithm> // Se incluye el encabezado necesario para std::find_if
+#include <algorithm>
 
 SistemaPedidos::SistemaPedidos() {
     productos = {
@@ -41,7 +41,7 @@ void SistemaPedidos::crearPedido() {
 
     std::vector<Producto> productosPedido;
     int idProducto;
-    std::cout << "Seleccione productos por ID (0 para terminar): ";
+    std::cout << "Seleccione productos por ID (0 para terminar): \n";
     while (true) {
         std::cin >> idProducto;
         if (idProducto == 0) break;
@@ -70,4 +70,27 @@ void SistemaPedidos::crearPedido() {
 
 void SistemaPedidos::mostrarPedidos() const {
     arbolPedidos.mostrarTodosLosPedidos();
+}
+
+void SistemaPedidos::cancelarPedido() {
+    int idPedido;
+    std::cout << "Ingrese el ID del pedido a cancelar: ";
+    std::cin >> idPedido;
+
+    if (arbolPedidos.eliminarPedido(idPedido)) {
+        std::cout << "Pedido con ID " << idPedido << " cancelado exitosamente.\n";
+    } else {
+        std::cout << "No se encontro un pedido con el ID especificado.\n";
+    }
+}
+
+void SistemaPedidos::mostrarEstadisticas() {
+    int totalPedidos = arbolPedidos.obtenerTotalPedidos();
+    double montoTotal = arbolPedidos.obtenerMontoTotal();
+    std::string productoMasSolicitado = arbolPedidos.obtenerProductoMasSolicitado();
+
+    std::cout << "Estadísticas de pedidos:\n";
+    std::cout << "Total de pedidos realizados: " << totalPedidos << "\n";
+    std::cout << "Monto total acumulado: " << montoTotal << " CLP\n";
+    std::cout << "Producto más solicitado: " << productoMasSolicitado << "\n";
 }

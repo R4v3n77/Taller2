@@ -2,23 +2,26 @@
 // Created by mrobl on 24-11-2024.
 //
 
-#ifndef SISTEMAPEDIDOS_H
-#define SISTEMAPEDIDOS_H
+#ifndef SISTEMA_PEDIDOS_H
+#define SISTEMA_PEDIDOS_H
 
-#include "AVL.h"
-#include "Producto.h"
 #include <vector>
+#include "Producto.h"
+#include "Pedido.h"
+#include "ArbolPedidos.h"
 
 class SistemaPedidos {
-private:
-    AVL arbolPedidos;
-    std::vector<Producto> productos;
-
 public:
     SistemaPedidos();
     void mostrarProductos() const;
     void crearPedido();
     void mostrarPedidos() const;
+    void cancelarPedido();      // Nueva función para cancelar pedido
+    void mostrarEstadisticas(); // Nueva función para mostrar estadísticas
+
+private:
+    std::vector<Producto> productos;
+    ArbolPedidos arbolPedidos;
 };
 
-#endif // SISTEMAPEDIDOS_H
+#endif // SISTEMA_PEDIDOS_H
